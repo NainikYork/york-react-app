@@ -18,5 +18,5 @@ Install base packages
   npm init @eslint/config
 ```
 
-![Eslint](public/readme/eslint.gif)
+![Eslint](https://raw.githubusercontent.com/NainikYork/york-react-app/WIP/base-setup/public/readme/eslint.gif)
 
