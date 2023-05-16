@@ -20,3 +20,16 @@ Install base packages
 
 ![Eslint] (https://github.com/NainikYork/york-react-app/assets/111424892/c48ac6fc-739d-47ff-808e-3be0bd8b80e4)
 
+## Husky
+
+Husky is a tool that is commonly used in software development to enforce Git commit workflows and ensure that code quality standards are met. Essentially, Husky is a Git hook that runs scripts before certain Git commands are executed. This enables developers to automate tasks such as running tests, linting code, or checking formatting before changes are committed to the codebase.
+
+In short, Husky helps developers maintain code quality and consistency by automating pre-commit tasks.
+
+```bash
+  yarn add -D husky
+  npx husky install
+  npx husky add .husky/pre-commit "yarn lint"
+  npx husky add .husky/pre-push "yarn build"
+```
+
