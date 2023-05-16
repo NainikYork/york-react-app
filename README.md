@@ -18,3 +18,5 @@ Install base packages
   npm init @eslint/config
 ```
 
+![Eslint](readme/eslint.gif)
+
