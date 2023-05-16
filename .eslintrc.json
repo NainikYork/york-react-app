@@ -15,6 +15,8 @@
                 plugins include React, and the rules specify various settings such as maximum line length, linebreak
                 style, and import extensions.
  * @author [Nainik Mehta] <[nainik@york.ie]>
+ * 
+ * @steps : [1] npm init @eslint/config
  * @version 1.0.0
  *
  * --------------------------------------------------
