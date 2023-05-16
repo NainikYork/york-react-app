@@ -1,3 +1,21 @@
-// eslint-disable-next-line prettier/prettier
-
-module.exports = {};
+module.exports = {
+  babel: {
+    presets: [
+      ['@babel/preset-env'],
+      [
+        '@babel/preset-react',
+        {
+          runtime: 'automatic',
+        },
+      ],
+    ],
+    plugins: [
+      [
+        '@babel/plugin-transform-runtime',
+        {
+          regenerator: true,
+        },
+      ],
+    ],
+  },
+};
