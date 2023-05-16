@@ -1,6 +1,7 @@
 {
   "name": "york-react-app",
   "version": "0.1.0",
+  "description": "A react base project featued by York.IE",
   "private": true,
   "engines": {
     "node": ">=18.0.0",
@@ -20,7 +21,10 @@
     "start": "craco start --verbose",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "eslintConfig": {
     "extends": [
@@ -40,7 +44,28 @@
       "last 1 safari version"
     ]
   },
+  "keywords": [
+    "ReactJS",
+    "Webpack-5",
+    "Husky",
+    "Prettier",
+    "Eslint",
+    "York.IE",
+    "Base-Project"
+  ],
+  "author": "Nainik Mehta",
+  "license": "ISC",
   "devDependencies": {
-    "@craco/craco": "^7.1.0"
+    "@craco/craco": "^7.1.0",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.8.8"
   }
 }
+
