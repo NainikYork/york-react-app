@@ -5,7 +5,7 @@
  *
  * --------------------------------------------------
  *
- * @module app.v1.eslintConfiguration
+ * @module app.v1.prettierConfiguration
  * @description This code exports an object that specifies various settings and rules for ESLint, a popular
  *              JavaScript linter. The settings include whether or not to use semicolons, what type of trailing
  *              commas to use, whether to use single or double quotes for strings, the width of tabs, the maximum
