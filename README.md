@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# York.IE React Boilerplate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ReactJS boilerplate code by York.IE is a preconfigured setup for building web applications with React. It includes a basic file structure, configuration files, and pre-installed dependencies that help you get started quickly.
 
-## Available Scripts
+The boilerplate code uses modern web development tools such as Webpack, Babel, and ESLint to provide an efficient development environment. It also includes popular libraries like Redux, React Router, and Axios to help you build scalable and maintainable applications.
 
-In the project directory, you can run:
+The file structure is organized into separate directories for components, containers, reducers, actions, and other resources. This helps to maintain a clear separation of concerns and makes it easy to navigate the codebase.
 
-### `yarn start`
+Overall, ReactJS boilerplate code by York.IE provides a solid foundation for building React applications and saves you time and effort in setting up your development environment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Eslint - Prettier
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is a configuration file for ESLint, a popular JavaScript linter. It exports an object that specifies various settings and rules for ESLint to follow when analyzing JavaScript code. The object includes settings for the environment, extensions, parser options, plugins, and rules. The environment is set to browser and es2021, and the extensions include recommended plugins for React, React Hooks, import errors and warnings, and accessibility. The parser options specify the latest ECMAScript version and module source type. The settings include the version of React to detect. The plugins include React, and the rules specify various settings such as maximum line length, linebreak style, and import extensions.
+Install base packages
 
-### `yarn test`
+```bash
+  yarn add eslint --dev
+  npm init @eslint/config
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Eslint] (https://github.com/NainikYork/york-react-app/assets/111424892/c48ac6fc-739d-47ff-808e-3be0bd8b80e4)
 
-### `yarn build`
+## Husky
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Husky is a tool that is commonly used in software development to enforce Git commit workflows and ensure that code quality standards are met. Essentially, Husky is a Git hook that runs scripts before certain Git commands are executed. This enables developers to automate tasks such as running tests, linting code, or checking formatting before changes are committed to the codebase.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In short, Husky helps developers maintain code quality and consistency by automating pre-commit tasks.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+  yarn add -D husky
+  npx husky install
+  npx husky add .husky/pre-commit "yarn lint"
+  npx husky add .husky/pre-push "yarn build"
+```
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
