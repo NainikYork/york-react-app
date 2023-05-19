@@ -1,3 +1,6 @@
+/* eslint-disable global-require */
+/* eslint-disable import/no-dynamic-require */
+
 /**
  * This file is part of [York.IE React Base Starter Template]
  *
@@ -16,24 +19,34 @@
  * --------------------------------------------------
  */
 
-module.exports = {
-  babel: {
-    presets: [
-      ['@babel/preset-env'],
-      [
-        '@babel/preset-react',
-        {
-          runtime: 'automatic',
-        },
+const { merge } = require('webpack-merge');
+const commonConfig = require('./webpack/webpack.common');
+
+module.exports = (envVars) => {
+  const { env } = envVars;
+  const envConfig = require(`./webpack/webpack.${env}.js`);
+  const config = merge(commonConfig, envConfig);
+
+  return {
+    babel: {
+      presets: [
+        ['@babel/preset-env'],
+        [
+          '@babel/preset-react',
+          {
+            runtime: 'automatic',
+          },
+        ],
       ],
-    ],
-    plugins: [
-      [
-        '@babel/plugin-transform-runtime',
-        {
-          regenerator: true,
-        },
+      plugins: [
+        [
+          '@babel/plugin-transform-runtime',
+          {
+            regenerator: true,
+          },
+        ],
       ],
-    ],
-  },
+    },
+    webpack: { ...config },
+  };
 };
