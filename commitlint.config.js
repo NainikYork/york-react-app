@@ -64,7 +64,7 @@ module.exports = {
     'scope-enum': [
       2,
       'always',
-      ['components', 'pages', 'utils', 'tests', 'config'],
+      ['libraries', 'components', 'pages', 'utils', 'tests', 'config'],
     ],
     // header has value or less characters
     'header-max-length': [2, 'always', 100],
