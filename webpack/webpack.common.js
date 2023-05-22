@@ -49,6 +49,8 @@ module.exports = {
         use: [
           { loader: MiniCssExtractPlugin.loader },
           { loader: 'css-loader', options: { modules: true } },
+          { loader: 'sass-loader' },
+          { loader: 'postcss-loader' },
         ],
       },
       {
@@ -58,16 +60,17 @@ module.exports = {
           'style-loader',
           'css-loader',
           'less-loader',
+          'postcss-loader',
         ],
       },
-      {
-        test: /\.s[ac]ss$/,
-        use: [
-          { loader: MiniCssExtractPlugin.loader },
-          { loader: 'css-loader', options: { modules: true } },
-          { loader: 'sass-loader' },
-        ],
-      },
+      // {
+      //   test: /\.s[ac]ss$/,
+      //   use: [
+      //     { loader: MiniCssExtractPlugin.loader },
+      //     { loader: 'css-loader', options: { modules: true } },
+      //     { loader: 'sass-loader' },
+      //   ],
+      // },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         type: 'asset/resource',
