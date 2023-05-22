@@ -44,14 +44,48 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "import", "prettier"],
   "rules": {
     "react/jsx-uses-react": ["off"],
     "react/react-in-jsx-scope": ["off"],
     "react/jsx-props-no-spreading": ["off"],
     "no-shadow": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["builtin", "external"], // NodeJs || ReactJS built-in modules OR External modules (external to the project)
+          "internal", // Internal modules (inside the project)
+          "parent", // Parent directories' modules (outside the project)
+          "sibling", // Sibling modules (inside the same or nested directories)
+          "index" // Index file in the current directory
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "import/newline-after-import": "error",
+    "react/jsx-sort-props": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+    // "import/resolver": {
+    //   "alias": {
+    //     "map": [
+    //       ["@components", "./src/components"],
+    //       ["@utils", "./src/utils"]
+    //       // Add more aliases as needed
+    //     ],
+    //     "extensions": [".js", ".jsx"]
+    //   }
+    // }
   }
 }
 
