@@ -111,7 +111,7 @@ module.exports = {
     clean: true,
     asyncChunks: true,
     chunkFilename: '[name].[id].js',
-    assetModuleFilename: 'images/[hash][ext][query]',
+    assetModuleFilename: 'includes/[hash][ext][query]',
   },
   plugins: [
     new HtmlWebpackPlugin({
